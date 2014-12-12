@@ -57,7 +57,8 @@
 {
     UIDevice* device = [UIDevice currentDevice];
     NSMutableDictionary* devProps = [NSMutableDictionary dictionaryWithCapacity:4];
-
+    
+    [devProps setObject:[device name] forKey:@"name"]; 
     [devProps setObject:[device modelVersion] forKey:@"model"];
     [devProps setObject:@"iOS" forKey:@"platform"];
     [devProps setObject:[device systemVersion] forKey:@"version"];
